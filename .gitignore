@@ -36,3 +36,4 @@ temp/
 email_content.*
 latest_*.json
 pushed.json
+.prizeops-review/

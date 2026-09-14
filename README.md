@@ -57,6 +57,17 @@ python -X utf8 01-radar/fetch_hackathons.py
 
 ## 从情报到复盘
 
+### 说“复盘”，自动贡献项目经验
+
+安装 [prizeops-review Skill](docs/one-word-review.md) 并首次同意公开提交后，在当前项目对话里说 **“复盘”**，助手会整理可见的全流程证据，复用 `gh` 登录，通过个人 Fork 向本仓库提交 PR；重复复盘更新已有开放 PR。
+
+```bash
+gh auth login --hostname github.com
+python -X utf8 07-crystal/install_review_skill.py --agent codex --enable-public-pr
+```
+
+上述开关明确启用以后“复盘”时自动公开报告。不想预先授权就去掉开关。只上传复盘 Markdown，不上传源代码、原始聊天或密钥；缺失历史不编造，未登录先保存在本地。安装后重新加载助手，详见[使用说明与关闭方法](docs/one-word-review.md)。
+
 | 阶段 | 要解决的问题 | 从这里开始 |
 |---|---|---|
 | 情报雷达 | 有什么比赛，什么时候截止？ | [抓取与通知](01-radar/README.md) |
