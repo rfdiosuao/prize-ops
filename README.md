@@ -84,8 +84,11 @@ python -X utf8 07-crystal/install_review_skill.py --agent codex --enable-public-
 | 项目 | 赛事 | 成绩 | 记录 |
 |---|---|---|---|
 | [养令 YangLing](https://github.com/rfdiosuao/yangling) | 复客松（团队简称，正式全称待补） | **二等奖**，参赛者确认 | [赛事档案](events/2026-09-13-yangling.md) · [完整复盘](reviews/2026-09-13-复客松-养令-二等奖复盘.md) |
+| 一念成界 · Worldseed（白小纯） | Eazo 数字艺术黑客松 | **最佳世界观奖（并列）**，已有赛后记录及参赛者确认 | [赛事档案](events/2026-09-07-worldseed.md) · [赛后拆解](reviews/2026-09-07-Eazo数字艺术黑客松-获奖项目全景拆解.md) |
 
 养令复盘的核心经验：把具体问题做成可体验的产品，再用真实演示讲清价值。尚无评委评分明细，不把某个功能或赞助方接入直接归因为获奖原因。
+
+Worldseed 的可复用经验：把“一念成界”的概念转成可进入、可互动、可封存的世界体验。奖项是最佳世界观奖（并列），不是该场总冠军。
 
 ## 一起补充这个仓库
 
