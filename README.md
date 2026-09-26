@@ -75,6 +75,7 @@ python -X utf8 07-crystal/install_review_skill.py --agent codex --enable-public-
 | 作品设计 | 怎样把核心价值变成可操作的 Demo？ | [最小演示流程](docs/minimum-demo-loop.md) |
 | 视觉与交互 | 怎样让人看懂、用顺？ | [UI 美学](05-stage/UI_AESTHETICS.md) · [交互](05-stage/UX_INTERACTION.md) |
 | 路演冲刺 | 怎样把功能讲成有依据的价值？ | [路演稿](06-sprint/ALTRUISTIC_PITCH.md) · [演示材料](06-sprint/PITCH_DECK.md) |
+| 游园会展示（适用时） | 陌生人能否上手，展示者能否稳定讲清？ | [游园会执行流程](docs/EXPO_PLAYBOOK.md) · [SUMMON 案例](05-stage/EXPO_CASES.md) |
 | 复盘沉淀 | 什么要保留，下一次先改什么？ | [复盘流程](07-crystal/README.md) · [档案](reviews/README.md) |
 
 完整旧版方法与部署提示保存在 [工作流历史手册](WORKFLOW.md)。其中的比例、既有配置状态和规划内容不等同于当前验收结果，应以代码、实际测试与本场赛规为准。
@@ -83,10 +84,13 @@ python -X utf8 07-crystal/install_review_skill.py --agent codex --enable-public-
 
 | 项目 | 赛事 | 成绩 | 记录 |
 |---|---|---|---|
+| [唤名 SUMMON](https://github.com/rfdiosuao/summon-protocol) | EvoTavern 进化酒馆黑客松 · 深圳站 | 赛事结果未记录；仓库已有实机演示记录 | [过程复盘](reviews/2026-09-24-EvoTavern深圳站-唤名SUMMON.md) · [游园会流程](docs/EXPO_PLAYBOOK.md) |
 | [养令 YangLing](https://github.com/rfdiosuao/yangling) | 复客松（团队简称，正式全称待补） | **二等奖**，参赛者确认 | [赛事档案](events/2026-09-13-yangling.md) · [完整复盘](reviews/2026-09-13-复客松-养令-二等奖复盘.md) |
 | 一念成界 · Worldseed（白小纯） | Eazo 数字艺术黑客松 | **最佳世界观奖（并列）**，已有赛后记录及参赛者确认 | [赛事档案](events/2026-09-07-worldseed.md) · [赛后拆解](reviews/2026-09-07-Eazo数字艺术黑客松-获奖项目全景拆解.md) |
 
 养令复盘的核心经验：把具体问题做成可体验的产品，再用真实演示讲清价值。尚无评委评分明细，不把某个功能或赞助方接入直接归因为获奖原因。
+
+SUMMON 复盘将“可重复的主链”和“清楚的现场讲解”作为下一次游园会的双目标。参赛者提出的 60/40 是备战配比，**不是官方评分权重**；赛前应核对赛事规则，游园会前一天必须冻结演示版本并正常休息。
 
 Worldseed 的可复用经验：把“一念成界”的概念转成可进入、可互动、可封存的世界体验。奖项是最佳世界观奖（并列），不是该场总冠军。
 
