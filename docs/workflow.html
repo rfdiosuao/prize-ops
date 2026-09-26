@@ -3,22 +3,18 @@
   <!-- 标题 -->
   <div style="text-align:center;margin-bottom:8px;">
     <div style="font-size:12px;letter-spacing:3px;color:#58a6ff;text-transform:uppercase;margin-bottom:6px;">PrizeOps v2.0</div>
-    <h1 style="font-size:26px;font-weight:700;margin:0;color:#f0f6fc;">PrizeOps · 黑客松夺奖系统 · 七阶段工作流</h1>
-    <p style="font-size:14px;color:#8b949e;margin:8px 0 0;">从「发现比赛」到「拿奖复盘提PR」的端到端闭环 · 含自动参赛轻量通道 · 每个人按此流程执行即可系统性提升获奖概率</p>
+    <h1 style="font-size:26px;font-weight:700;margin:0;color:#f0f6fc;">PrizeOps · 七阶段工作流与游园会展示支线</h1>
+    <p style="font-size:14px;color:#8b949e;margin:8px 0 0;">从发现比赛、组队交付、现场展示到赛后复盘；每一步以当场规则和实际验收为准</p>
   </div>
-  <!-- 获奖公式 -->
+  <!-- 现场准备原则 -->
   <div style="margin:20px auto;max-width:640px;background:#161b22;border:1px solid #30363d;border-radius:10px;padding:14px 18px;text-align:center;">
-    <div style="font-size:13px;color:#8b949e;margin-bottom:6px;">🏆 黑客松获奖公式</div>
-    <div style="font-size:18px;font-weight:700;color:#f0f6fc;">
-      <span style="color:#58a6ff;">Idea 60%</span> + 
-      <span style="color:#f0883e;">UI 20%</span> + 
-      <span style="color:#d2a8ff;">路演 20%</span>
-    </div>
-    <div style="font-size:12px;color:#484f58;margin-top:4px;">最小可演示闭环 · 做少做精做炸 · 不追求项目完成度</div>
+    <div style="font-size:13px;color:#8b949e;margin-bottom:6px;">现场准备原则</div>
+    <div style="font-size:18px;font-weight:700;color:#f0f6fc;">先完成可重复的主链，再让陌生人看懂并上手</div>
+    <div style="font-size:12px;color:#8b949e;margin-top:4px;">具体评分以当场官方规则为准；SUMMON 游园会复盘提出的 60/40 仅是备战配比</div>
   </div>
   <!-- 图例 -->
   <div style="display:flex;gap:16px;justify-content:center;margin:20px 0 28px;flex-wrap:wrap;">
-    <span style="display:flex;align-items:center;gap:6px;font-size:12px;color:#8b949e;"><span style="width:10px;height:10px;border-radius:2px;background:#58a6ff;display:inline-block;"></span>全自动（定时任务）</span>
+    <span style="display:flex;align-items:center;gap:6px;font-size:12px;color:#8b949e;"><span style="width:10px;height:10px;border-radius:2px;background:#58a6ff;display:inline-block;"></span>可配置自动化</span>
     <span style="display:flex;align-items:center;gap:6px;font-size:12px;color:#8b949e;"><span style="width:10px;height:10px;border-radius:2px;background:#f0883e;display:inline-block;"></span>人机协作</span>
     <span style="display:flex;align-items:center;gap:6px;font-size:12px;color:#8b949e;"><span style="width:10px;height:10px;border-radius:2px;background:#3fb950;display:inline-block;"></span>阶段产出</span>
     <span style="display:flex;align-items:center;gap:6px;font-size:12px;color:#8b949e;"><span style="width:10px;height:10px;border-radius:50%;border:2px solid #d2a8ff;display:inline-block;"></span>反馈循环</span>
@@ -33,14 +29,14 @@
       <div style="background:#161b22;border:1px solid #30363d;border-radius:10px;padding:16px 18px;border-left:3px solid #58a6ff;">
         <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
           <span style="font-size:16px;font-weight:600;color:#58a6ff;">情报雷达</span>
-          <span style="font-size:11px;background:#1f6feb33;color:#58a6ff;padding:2px 8px;border-radius:10px;">全自动 · 每天 9:00 / 20:00</span>
+          <span style="font-size:11px;background:#1f6feb33;color:#58a6ff;padding:2px 8px;border-radius:10px;">手动运行 / 可配置定时</span>
         </div>
-        <div style="font-size:13px;color:#8b949e;margin:6px 0;"><b style="color:#c9d1d9;">触发：</b>定时任务 cron 自动触发</div>
+        <div style="font-size:13px;color:#8b949e;margin:6px 0;"><b style="color:#c9d1d9;">触发：</b>手动运行，或自行配置 cron</div>
         <div style="font-size:13px;color:#c9d1d9;line-height:1.7;">
-          <b>动作：</b>多源抓取（HackHQ + 观猹 watcha + 小红书3博主 + Lablab.ai + 大厂赛事 + 公众号搜索）→ 按位置/预算/截止筛选 → 去重 → 多通道推送（飞书为主 + 邮箱/短信为辅）<br>
+          <b>动作：</b>运行现有赛事抓取脚本 → 核对来源与截止日期 → 按位置、预算和赛道筛选；飞书、邮件等通知需另行配置<br>
           <b style="color:#8b949e;">关联模块：</b><code style="background:#21262d;padding:1px 5px;border-radius:3px;font-size:12px;">01-radar/</code> fetch_hackathons.py + send_feishu.py
         </div>
-        <div style="margin-top:8px;font-size:13px;color:#3fb950;">📦 产出：比赛清单卡片（名称 / 截止 / 奖金 / 报名链接 / 地点）→ 飞书推送</div>
+        <div style="margin-top:8px;font-size:13px;color:#3fb950;">📦 产出：待核验的比赛清单；配置通知后可选择推送</div>
       </div>
     </div>
     <div style="text-align:center;color:#484f58;font-size:18px;margin:-8px 0 16px 0;">↓</div>
@@ -61,7 +57,7 @@
         <div style="margin-top:10px;display:grid;grid-template-columns:1fr 1fr;gap:8px;">
           <div style="background:#0d1117;border:1px solid #30363d;border-radius:8px;padding:10px 12px;">
             <div style="font-size:12px;font-weight:600;color:#58a6ff;margin-bottom:4px;">⚡ 轻量通道（线上提交制）</div>
-            <div style="font-size:11px;color:#8b949e;line-height:1.6;">自动参赛 Agent：扫描GitHub → AI匹配项目 → 自动包装 → 半自动提交 → <b>结果自动跟踪（每5天）</b> → 获奖触发复盘</div>
+            <div style="font-size:11px;color:#8b949e;line-height:1.6;">检查已有项目是否符合本场要求 → 核对提交材料与规则 → 人工确认提交 → 记录结果并复盘；自动化须按实际配置核验</div>
             <div style="font-size:11px;color:#484f58;margin-top:4px;"><code style="background:#21262d;padding:1px 4px;border-radius:3px;">AUTO_ENTRY.md</code></div>
           </div>
           <div style="background:#0d1117;border:1px solid #30363d;border-radius:8px;padding:10px 12px;">
@@ -80,7 +76,7 @@
       <div style="background:#161b22;border:1px solid #30363d;border-radius:10px;padding:16px 18px;border-left:3px solid #f0883e;">
         <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
           <span style="font-size:16px;font-weight:600;color:#f0883e;">深度分析 + 创意生成</span>
-          <span style="font-size:11px;background:#f0883e22;color:#f0883e;padding:2px 8px;border-radius:10px;">人机协作 · 核心 60%</span>
+          <span style="font-size:11px;background:#f0883e22;color:#f0883e;padding:2px 8px;border-radius:10px;">人机协作 · 先核实赛题</span>
         </div>
         <div style="font-size:13px;color:#8b949e;margin:6px 0;"><b style="color:#c9d1d9;">触发：</b>确定走重量通道后</div>
         <div style="font-size:13px;color:#c9d1d9;line-height:1.7;">
@@ -101,7 +97,7 @@
         </div>
         <div style="font-size:13px;color:#8b949e;margin:6px 0;"><b style="color:#c9d1d9;">触发：</b>idea 确定后</div>
         <div style="font-size:13px;color:#c9d1d9;line-height:1.7;">
-          <b>动作：</b>从获奖作品档案选风格 → UI设计规范 → 交互逻辑 → 鼠标交互动作 → 首屏流体动效 → 倒推制作顺序（先图片资产 or 先框架）→ 按最小MVP标准砍功能<br>
+          <b>动作：</b>从获奖作品档案选风格 → UI设计规范 → 交互逻辑 → 鼠标交互动作 → 首屏流体动效 → 倒推制作顺序（先图片资产 or 先框架）→ 按最小可演示闭环收敛功能<br>
           <b style="color:#8b949e;">关联模块：</b><code style="background:#21262d;padding:1px 5px;border-radius:3px;font-size:12px;">04-arsenal/</code> + <code style="background:#21262d;padding:1px 5px;border-radius:3px;font-size:12px;">05-stage/</code> 5个蒸馏文档 + archive-miaoda 13个获奖作品
         </div>
         <div style="margin-top:8px;font-size:13px;color:#3fb950;">📦 产出：UI设计规范 + 交互原型 + 图片资产清单 + 最小MVP功能清单</div>
@@ -118,7 +114,7 @@
         </div>
         <div style="font-size:13px;color:#8b949e;margin:6px 0;"><b style="color:#c9d1d9;">触发：</b>设计规范确定后</div>
         <div style="font-size:13px;color:#c9d1d9;line-height:1.7;">
-          <b>动作：</b>按制作流程执行 → 图片资产先行 → 搭框架填充 → <b>只做最小可演示闭环（P0功能40%时间 + P1 UI 25%时间）</b> → 设计哇时刻 → 不追求项目完成度<br>
+          <b>动作：</b>按制作流程执行 → 图片资产先行 → 搭框架填充 → <b>先让真实输入、执行和回执连续跑通</b> → 验证陌生人能上手 → 再做必要的呈现<br>
           <b style="color:#8b949e;">关联模块：</b><code style="background:#21262d;padding:1px 5px;border-radius:3px;font-size:12px;">06-sprint/</code> minimum-demo-loop.md + PRODUCTION_FLOW.md
         </div>
         <div style="margin-top:8px;font-size:13px;color:#3fb950;">📦 产出：可运行 demo（3分钟可演示的最小闭环）+ 演示视频（45-90秒）</div>
@@ -142,27 +138,40 @@
       </div>
     </div>
     <div style="text-align:center;color:#484f58;font-size:18px;margin:-8px 0 16px 0;">↓</div>
+    <!-- 游园会现场展示支线：适用于游园/展览式评审 -->
+    <div style="position:relative;margin-bottom:24px;">
+      <div style="background:#161b22;border:1px solid #3fb950;border-radius:10px;padding:16px 18px;border-left:3px solid #3fb950;">
+        <div style="font-size:16px;font-weight:600;color:#3fb950;">游园会展示（适用时）</div>
+        <div style="font-size:13px;color:#c9d1d9;line-height:1.7;margin-top:8px;">
+          <b>动作：</b>确认本场赛制与评分 → 固定一条真实主链 → 让陌生人自己上手 → 展示输入、决定和设备回执 → 准备已标注的故障兜底。<br>
+          <b>赛前一天：</b>功能冻结、3 次完整演示、2 次讲解彩排、物料检查，<b>不熬夜</b>。<br>
+          <b>备战配比：</b>项目完成度约 60% / 讲解状态约 40%，是参赛者经验，不是官方评分权重。<br>
+          <b>流程：</b><a href="EXPO_PLAYBOOK.md" style="color:#3fb950;">游园会执行手册</a> · <a href="../05-stage/EXPO_CASES.md" style="color:#3fb950;">SUMMON 案例</a>
+        </div>
+        <div style="margin-top:8px;font-size:13px;color:#3fb950;">📦 产出：可重复的展位 Demo + 简短讲解 + 故障兜底 + 现场观察记录</div>
+      </div>
+    </div>
     <!-- 阶段 7 -->
     <div style="position:relative;margin-bottom:8px;">
       <div style="position:absolute;left:-48px;top:16px;width:36px;height:36px;border-radius:50%;background:#d2a8ff;color:#0d1117;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;z-index:1;">7</div>
       <div style="background:#161b22;border:1px solid #30363d;border-radius:10px;padding:16px 18px;border-left:3px solid #d2a8ff;">
         <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
           <span style="font-size:16px;font-weight:600;color:#d2a8ff;">复盘结晶</span>
-          <span style="font-size:11px;background:#d2a8ff22;color:#d2a8ff;padding:2px 8px;border-radius:10px;">全自动闭环 · 自动提PR</span>
+          <span style="font-size:11px;background:#d2a8ff22;color:#d2a8ff;padding:2px 8px;border-radius:10px;">整理证据 · 可选公开 PR</span>
         </div>
         <div style="font-size:13px;color:#8b949e;margin:6px 0;"><b style="color:#c9d1d9;">触发：</b>比赛结束（获奖 or 未获奖）</div>
         <div style="font-size:13px;color:#c9d1d9;line-height:1.7;">
-          <b>动作：</b>交互式复盘问卷（七维度自评 + 失败原因 + 评委反馈 + 改进Top3）→ 规则引擎分析短板（idea/UI/故事哪个不行）→ 生成复盘文档（含雷达图）→ <b>自动创建分支+提交+创建PR到总仓库</b><br>
-          <b style="color:#8b949e;">关联模块：</b><code style="background:#21262d;padding:1px 5px;border-radius:3px;font-size:12px;">07-crystal/</code> review_hackathon.py（502行）
+          <b>动作：</b>按证据整理目标与结果、全流程时间线、做对的事、问题与改进、下次三个重点；公开发布前检查隐私与授权，按需提交 PR<br>
+          <b style="color:#8b949e;">关联模块：</b><code style="background:#21262d;padding:1px 5px;border-radius:3px;font-size:12px;">07-crystal/</code> prizeops-review Skill
         </div>
-        <div style="margin-top:8px;font-size:13px;color:#3fb950;">📦 产出：复盘文档 + 针对性优化建议 + 自动PR（越多人用，项目越强）</div>
+        <div style="margin-top:8px;font-size:13px;color:#3fb950;">📦 产出：复盘文档 + 可执行改进项；经授权后公开提交 PR</div>
       </div>
     </div>
     <!-- 轻量通道结果跟踪说明 -->
     <div style="margin-top:20px;padding:14px 18px;background:#161b22;border:1px solid #1f6feb44;border-radius:10px;">
-      <div style="font-size:13px;color:#58a6ff;font-weight:600;margin-bottom:6px;">⚡ 轻量通道补充：结果自动跟踪</div>
+      <div style="font-size:13px;color:#58a6ff;font-weight:600;margin-bottom:6px;">⚡ 轻量通道补充：赛果跟踪（可配置）</div>
       <div style="font-size:13px;color:#8b949e;line-height:1.8;">
-        自动参赛提交后 → 云电脑保存登录态 → <b style="color:#c9d1d9;">每5天自动访问记录页</b> → 状态机跟踪（已提交→初审→入围→复赛→决赛→获奖/未获奖）→ 状态变化立即推送 → 获奖触发领奖指南+复盘 → 未获奖触发复盘+推荐下一场
+        提交后记录官方状态页和查询日期 → 定期核验初审、入围与赛果 → 结果确认后复盘；定时访问和通知只在已配置、已测试时启用
       </div>
     </div>
     <!-- 反馈循环 -->
@@ -170,7 +179,7 @@
       <div style="font-size:13px;color:#d2a8ff;font-weight:600;margin-bottom:6px;">🔄 反馈循环（让系统越跑越强 · 越多人用越强）</div>
       <div style="font-size:13px;color:#8b949e;line-height:1.8;">
         阶段7复盘PR → <b style="color:#c9d1d9;">优化阶段1情报源</b>（新增/淘汰信息源、调整筛选阈值）<br>
-        阶段7复盘PR → <b style="color:#c9d1d9;">迭代阶段3创意方法论</b>（验证哪些idea模式真的能拿奖）<br>
+        阶段7复盘PR → <b style="color:#c9d1d9;">迭代阶段3创意方法论</b>（区分过程证据与赛事结果，不用单次结果推断因果）<br>
         阶段7获奖作品 → <b style="color:#c9d1d9;">补充阶段4 UI档案</b>（新增获奖作品拆解，扩充风格库）<br>
         阶段7复盘PR → <b style="color:#c9d1d9;">优化阶段6路演模板</b>（沉淀有效的叙事结构和动画模式）
       </div>
@@ -178,7 +187,7 @@
   </div>
   <!-- 底部说明 -->
   <div style="margin-top:28px;padding-top:16px;border-top:1px solid #21262d;text-align:center;">
-    <p style="font-size:12px;color:#484f58;margin:0;">PrizeOps · 黑客松夺奖系统 · 七阶段工作流 v2.0 · 项目地址：github.com/rfdiosuao/prize-ops</p>
+    <p style="font-size:12px;color:#484f58;margin:0;">PrizeOps · 七阶段工作流 + 游园会展示支线 · 项目地址：github.com/rfdiosuao/prize-ops</p>
   </div>
 </div>
 </html>
